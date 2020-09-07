@@ -1,0 +1,112 @@
+<!--This template is part of Explanation 2, it shows the input influence of each Data Science sub-skill within the decision-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_input_influence.css') }}">
+</head>
+<body onLoad="data_input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	<div id="title">
+		<br>
+		<h1><a href="{{ url_for('graph') }}" width="50" height="50" id="arrow_data"><img src="{{ url_for('static',    filename='ressources/arrow.png') }}" width="50" height="50"></a>Data Science</h1>
+	</div>
+	
+	<div id="explanation">
+		<p>This graph shows the importance of each Data Science feature in the final decision. </p>
+
+		
+		<div id="father_container">
+			
+        	<!--Python Bubble-->	
+			<div id="python_circle_container" class="circle_container">
+				<div id="python_circle_main" class="circle_main">
+					<div id="python_circle_text_container" class="circle_text_container">
+						<div id="python_circle_text"class = "circle_text">
+							<b>Python</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+       		 <!--SQL Bubble-->
+			<div id="sql_circle_container" class="circle_container">
+				<div id="sql_circle_main" class="circle_main">
+					<div id="sql_circle_text_container" class="circle_text_container">
+						<div id="sql_circle_text"class = "circle_text">
+							<b>SQL</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--No SQL Bubble-->
+			<div id="nosql_circle_container" class="circle_container">
+				<div id="nosql_circle_main" class="circle_main">
+					<div id="nosql_circle_text_container" class="circle_text_container">
+						<div id="nosql_circle_text"class = "circle_text">
+							<b>No SQL</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Excel Bubble-->	
+			<div id="excel_circle_container" class="circle_container">
+				<div id="excel_circle_main" class="circle_main">
+					<div id="excel_circle_text_container" class="circle_text_container">
+						<div id="excel_circle_text"class = "circle_text">
+							<b>Micrsoft Excel</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Matlab Bubble-->
+			<div id="matlab_circle_container" class="circle_container">
+				<div id="matlab_circle_main" class="circle_main">
+					<div id="matlab_circle_text_container" class="circle_text_container">
+						<div id="matlab_circle_text"class = "circle_text">
+							<b>Matlab</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Database Bubble-->
+			<div id="database_circle_container" class="circle_container">
+				<div id="database_circle_main" class="circle_main">
+					<div id="database_circle_text_container" class="circle_text_container">
+						<div id="database_circle_text"class = "circle_text">
+							<b>Database</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Visualisation Bubble-->
+			<div id="visualisation_circle_container" class="circle_container">
+				<div id="visualisation_circle_main" class="circle_main">
+					<div id="visualisation_circle_text_container" class="circle_text_container">
+						<div id="visualisation_circle_text"class = "circle_text">
+							<b>Visualisation</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>              
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

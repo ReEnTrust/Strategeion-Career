@@ -1,0 +1,50 @@
+ html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+body {
+background: #497eb2;
+}
+h1{
+	font-family: "Calibri";
+	font: 20pt;
+	color: #191970;
+}
+#main {
+width:1000px;
+height: 250px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#logo{
+	width:200px;
+}
+#experiment{
+  margin-left: 40%;
+  color: #FFFAFA;
+  background-color:#4c7cb3;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+#previous{
+  margin-left: 41.5%;
+  color: #FFFAFA;
+  background-color:#4c7cb3;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+ cursor: pointer;
+}
+
+#father_container{
+  position: relative;
+}

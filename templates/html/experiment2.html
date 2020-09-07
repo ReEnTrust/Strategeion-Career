@@ -1,0 +1,170 @@
+<!--This is the template for Experiment 2-->
+<!--Experiment 2 corresponds to Explanation 2-->
+<!--Participants see Experiment 1, 2 and 3 in a random order-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_experiment2.css') }}">
+
+</head>
+<body onLoad="get_result(2);input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+
+	<!--This is the Result Section-->
+	<div id="result">
+		<div id="father_container">
+			<h2><i>Result</i></h2>
+		 	<p id="result_paragraph1"></p>
+		 	<p id="result_paragraph2"></p>
+		</div>
+	</div>
+
+	<!--This is the Experiment Section, showing Explanation 2-->
+	<div id="explanation">
+		
+
+		<h2><i>Explanation</i></h2>
+
+		<!--Explanative Text-->
+		<p>This graph shows how our algorithm makes a decision based on Candidate Profiles. Each circle represents how much each feature contributes to increasing your Candidate Score. <b>Click on the circles to obtain more detailed information for each feature.</b> </p>
+		
+		<div id="father_container">
+		
+			<!--Data Science Bubble-->
+			<a href="{{ url_for('data_input_influence') }}">
+				<div id="data_circle_container" class="circle_container">
+					<div id="data_circle_main" class="circle_main">
+						<div id="data_circle_text_container" class="circle_text_container">
+							<div id="data_circle_text"class = "circle_text">
+								<b>Data Science </b>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</a>
+			
+			<!--IT Bubble-->
+			<a href="{{ url_for('it_input_influence') }}">
+				<div id="it_circle_container" class="circle_container">
+					<div id="it_circle_main" class="circle_main">
+						<div id="it_circle_text_container" class="circle_text_container">
+							<div id="it_circle_text"class = "circle_text">
+							<b>IT</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+
+
+			<!--Development Skills Bubble-->
+			<a href="{{ url_for('dev_input_influence') }}">
+				<div id="dev_circle_container" class="circle_container">
+					<div id="dev_circle_main" class="circle_main">
+						<div id="dev_circle_text_container" class="circle_text_container">
+							<div id="dev_circle_text"class = "circle_text">
+								<b>Development</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		
+			<!--IT Project Management Bubble-->
+			<a href="{{ url_for('management_input_influence') }}">		
+				<div id="management_circle_container" class="circle_container">
+					<div id="management_circle_main" class="circle_main">
+						<div id="management_circle_text_container" class="circle_text_container">
+							<div id="management_circle_text"class = "circle_text">
+								<b>Management</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		
+
+			<!--Interpersonal Skills Bubble-->
+			<a href="{{ url_for('interpersonal_input_influence') }}">
+				<div id="interpersonal_circle_container" class="circle_container">
+					<div id="interpersonal_circle_main" class="circle_main">
+						<div id="interpersonal_circle_text_container" class="circle_text_container">
+							<div id="interpersonal_circle_text"class = "circle_text">
+								<b>Interpersonal</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!--Veteran Bubble-->
+			<div id="veteran_circle_container" class="circle_container">
+				<div id="veteran_circle_main" class="circle_main">
+					<div id="veteran_circle_text_container" class="circle_text_container">
+						<div id="veteran_circle_text"class = "circle_text">
+							<b>Veteran</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Disability Bubble-->
+			<div id="disability_circle_container" class="circle_container">
+				<div id="disability_circle_main" class="circle_main">
+					<div id="disability_circle_text_container" class="circle_text_container">
+						<div id="disability_circle_text"class = "circle_text">
+							<b>Disability</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<!--Sport Bubble-->
+			<a href="{{ url_for('sport_input_influence') }}">
+				<div id="sport_circle_container" class="circle_container">
+					<div id="sport_circle_main" class="circle_main">
+						<div id="sport_circle_text_container" class="circle_text_container">
+							<div id="sport_circle_text"class = "circle_text">
+								<b>Sport</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		
+			<!--Volunteering Bubble-->
+			<div id="volunteering_circle_container" class="circle_container">
+				<div id="volunteering_circle_main" class="circle_main">
+					<div id="volunteering_circle_text_container" class="circle_text_container">
+						<div id="volunteering_circle_text"class = "circle_text">
+							<b>Volunteering</b>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<!--Indications for participants-->
+	<div id="survey">
+		<h2><i>What's next?</i></h2>
+		<p> Now that you have read the explanation, please return to your <i>oxford.onlinesurveys</i> tab and answer the questions related this experiment.</p>
+	</div>
+
+	<!--Next and Previous buttons-->
+	<div id="next_experiment">
+		<div id="father_container">
+			<p>Now that you have completed the survey for this experiment, if you are ready, you can carry on with the study by clicking on Next.</p>
+			<button id="previous" onclick="back();"> Previous </button>
+			<button id="next" onclick="join_next_experiment();"> Next </button>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

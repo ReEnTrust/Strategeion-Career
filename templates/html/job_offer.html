@@ -1,0 +1,34 @@
+<!--This template is the Strategeion Job Offer participants apply to-->	
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
+</head>
+<body>
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	<h1>Job offer: Senior Data Scientist</h1>
+	<div id="main">
+		<div id="father_container">
+			<h2><b><i>About Strategeion</i></b></h2>
+				<p>Funded by veteran of the UK army, our company develops technical solutions and services that promote social change. Strategeion started by building a platform that would help veterans to transit to civilian life by remaining in touch and sharing their experience with their cohorts. Faithful to our motto <i>«leaving no one behind»</i>, we extended our platfrom to new communities  and diversified our range of services designed to help individuals facing poverty and joblessness. </p>
+			<h2><b><i>What we are looking for</i></b></h2>
+				<p>Strategeion is investing in data science. We want to add a new functionality on our platform that will permit to  provide users with the
+				platform content that is the most relevant to them. To do so, we are looking for an enthusiastic, senior data scientist to join our new Data Team.</p>
+			<h2><b><i>Environment</i></b></h2>
+				<p>You will be integrated into our Data Team of around ten people, organized in projects with agile management, in our headquarters in London. To carry out your projects, you might have to use development tools. Finally, the Data Team works closely with our IT Team, hence IT skills will be much appreciated.</p>
+			<br/>
+			<!--Button to Apply to the Offer-->	
+			<button id="apply" onclick="window.location.href='{{ url_for('application') }}';"> Apply </button>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+
+
+
+</body>
+</html>

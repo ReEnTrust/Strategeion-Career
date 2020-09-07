@@ -1,0 +1,34 @@
+<!--This template provides information to participants before they join the three experiments-->
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Experiments</h1>
+	<div id="introduction">
+		<div id="father_container">
+				<p>By clicking on Next, you will join a series of three experiments. <br/><br/>
+	For each experiment, you will be told if you are shortlisted by our system, and you will receive an explanation about how the decision was made. Then you will have to go back to the survey tab and answer the questions related to the explanation you have just seen.<br/><br/>
+	Your Candidate Profile will be assessed by a different e-recruitment system for each experiment, so make sure you always read the Result section. <br/><br/>
+	For each experiment, the e-recruitment system is different, so you cannot use the previous experiment's explanations to understand the current system you are seeing.<br/><br/>	
+	The explanations presented to you will be different for each experiment. 
+	 </p>
+				
+			<br/>
+
+			<!--Button to join the experiments-->	
+			<button id="next" onclick="window.location.href='{{ url_for('join_exp1') }}';"> Next </button>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+
+
+
+</body>
+</html>

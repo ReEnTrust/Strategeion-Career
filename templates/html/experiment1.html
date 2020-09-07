@@ -1,0 +1,54 @@
+<!--This is the template for Experiment 1-->
+<!--Experiment 1 corresponds to Explanation 1-->
+<!--Participants see Experiment 1, 2 and 3 in a random order-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_experiment1.css') }}">
+</head>
+<body onLoad="get_result(1);">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+
+	<!--This is the Result Section-->	
+	<div id="result">
+		<div id="father_container">
+			<h2><i>Result</i></h2>
+		 	<p id="result_paragraph1"></p>
+		 	<p id="result_paragraph2"></p>
+		</div>
+	</div>
+
+	<!--This is the Explanation Section, displaying Explanation 1-->
+	<div id="explanation">
+		<div id="father_container">
+			<h2><i>Explanation</i></h2>
+			<p>Our company faces a surge of applications, and the HR team needs an automated system to cope with it. The system enables HRs to perform a pre-shortlisting of candidates to select the ones to interview. </p>
+			<p>Our system studies candidates’ profiles in light of past hiring data in order to shortlist candidates. The system has been audited to guarantee fair treatment for all candidates.</p>
+			<p>If you are unhappy with the decision you can contact us via hr@strategeion.uk, we will respond to your request as soon as we can in a limit of a month.</p>
+		</div>
+	</div>
+
+	<!--Indication for participants-->	
+	<div id="survey">
+		<h2><i>What's next?</i></h2>
+		<p> Now that you have read the explanation, please return to your <i>oxford.onlinesurveys</i> tab and answer the questions related this experiment.</p>
+	</div>
+
+	<!--Previous and Next buttons-->
+	<div id="next_experiment">
+		<div id="father_container">
+			<p>Now that you have completed the survey for this experiment, if you are ready, you can carry on with the study by clicking on Next.</p>
+			<button id="previous" onclick="back();"> Previous </button>
+			<button id="next" onclick="join_next_experiment();"> Next </button>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

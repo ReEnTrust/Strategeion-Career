@@ -1,0 +1,109 @@
+<!--This template is part of Explanation 2, it shows the input influence of each Development Skills sub-skill within the decision-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_input_influence.css') }}">
+</head>
+<body onLoad="dev_input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	<div id="title">
+		<br>
+		<h1><a href="{{ url_for('graph') }}" width="50" height="50" id="arrow_dev"><img src="{{ url_for('static',    filename='ressources/arrow.png') }}" width="50" height="50"></a> Development Skills</h1>
+	</div>
+	
+	<div id="explanation">
+		<p>This graph shows the importance of each Development Skill feature in the final decision. </p>
+		
+		<div id="father_container">
+			<!--C++ Bubble-->
+			<div id="cpp_circle_container" class="circle_container">
+				<div id="cpp_circle_main" class="circle_main">
+					<div id="cpp_circle_text_container" class="circle_text_container">
+						<div id="cpp_circle_text"class = "circle_text">
+							<b>C++</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Java Bubble-->
+			<div id="java_circle_container" class="circle_container">
+				<div id="java_circle_main" class="circle_main">
+					<div id="java_circle_text_container" class="circle_text_container">
+						<div id="java_circle_text"class = "circle_text">
+							<b>Java</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--JS Bubble-->
+			<div id="javascript_circle_container" class="circle_container">
+				<div id="javascript_circle_main" class="circle_main">
+					<div id="javascript_circle_text_container" class="circle_text_container">
+						<div id="javascript_circle_text"class = "circle_text">
+							<b>JavaScript</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--HTML Bubble-->
+			<div id="html_circle_container" class="circle_container">
+				<div id="html_circle_main" class="circle_main">
+					<div id="html_circle_text_container" class="circle_text_container">
+						<div id="html_circle_text"class = "circle_text">
+							<b>HTML</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--CSS Bubble-->
+			<div id="css_circle_container" class="circle_container">
+				<div id="css_circle_main" class="circle_main">
+					<div id="css_circle_text_container" class="circle_text_container">
+						<div id="css_circle_text"class = "circle_text">
+							<b>CSS</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Web Development Bubble-->
+			<div id="web_circle_container" class="circle_container">
+				<div id="web_circle_main" class="circle_main">
+					<div id="web_circle_text_container" class="circle_text_container">
+						<div id="web_circle_text"class = "circle_text">
+							<b>Web Development</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Software Bubble-->
+			<div id="software_circle_container" class="circle_container">
+				<div id="software_circle_main" class="circle_main">
+					<div id="software_circle_text_container" class="circle_text_container">
+						<div id="software_circle_text"class = "circle_text">
+							<b>Software Development</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>              
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

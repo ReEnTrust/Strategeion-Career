@@ -1,0 +1,110 @@
+<!--This template is part of Explanation 2, it shows the input influence of each IT skill within the decision-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_input_influence.css') }}">
+
+</head>
+<body onLoad="it_input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	<div id="title">
+		<br>
+		<h1><a href="{{ url_for('graph') }}" width="50" height="50" id="arrow_it"><img src="{{ url_for('static',    filename='ressources/arrow.png') }}" width="50" height="50"></a>IT skills</h1>
+	</div>
+	
+	<div id="explanation">
+		<p>This graph shows the importance of each IT feature in the final decision. </p>
+	
+		<div id="father_container">
+			
+			<!--Linux Bubble-->	
+			<div id="linux_circle_container" class="circle_container">
+				<div id="linux_circle_main" class="circle_main">
+					<div id="linux_circle_text_container" class="circle_text_container">
+						<div id="linux_circle_text"class = "circle_text">
+							<b>linux</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Windows Bubble-->	
+			<div id="windows_circle_container" class="circle_container">
+				<div id="windows_circle_main" class="circle_main">
+					<div id="windows_circle_text_container" class="circle_text_container">
+						<div id="windows_circle_text"class = "circle_text">
+							<b>windows</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Mac OS Bubble-->	
+			<div id="mac_circle_container" class="circle_container">
+				<div id="mac_circle_main" class="circle_main">
+					<div id="mac_circle_text_container" class="circle_text_container">
+						<div id="mac_circle_text"class = "circle_text">
+							<b>mac</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Cloud Bubble-->	
+			<div id="cloud_circle_container" class="circle_container">
+				<div id="cloud_circle_main" class="circle_main">
+					<div id="cloud_circle_text_container" class="circle_text_container">
+						<div id="cloud_circle_text"class = "circle_text">
+						<b>cloud</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Modem Bubble-->	
+			<div id="modems_circle_container" class="circle_container">
+				<div id="modems_circle_main" class="circle_main">
+					<div id="modems_circle_text_container" class="circle_text_container">
+						<div id="modems_circle_text"class = "circle_text">
+						<b>modems</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Cybersecurity Bubble-->	
+			<div id="cybersecurity_circle_container" class="circle_container">
+				<div id="cybersecurity_circle_main" class="circle_main">
+					<div id="cybersecurity_circle_text_container" class="circle_text_container">
+						<div id="cybersecurity_circle_text"class = "circle_text">
+							<b>cybersecurity</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--IP SetUp Bubble-->	
+			<div id="ip_circle_container" class="circle_container">
+				<div id="ip_circle_main" class="circle_main">
+					<div id="ip_circle_text_container" class="circle_text_container">
+						<div id="ip_circle_text"class = "circle_text">
+							<b>ip</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>              
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

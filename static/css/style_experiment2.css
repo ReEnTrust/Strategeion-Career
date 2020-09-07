@@ -1,0 +1,221 @@
+ html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+body {
+background: #497eb2;
+}
+h1{
+	text-align:center;
+	font-family: "Calibri";
+	font: 24pt;
+	color: #191970;
+}
+h2{
+	font-family: "Calibri";
+	font: 20pt;
+	color: #191970;
+}
+p{
+	font-family: "Calibri";
+	font-size: 12pt;
+	color: #191970;
+
+}
+ul{
+	font-family: "Calibri";
+	font: 28pt;
+
+}
+input{
+	text-align:center;
+	margin-left: 35%;
+  	font-size:24px;
+}
+
+#logo{
+	width:200px;
+}
+#main {
+width:1000px;
+height: 450px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#title {
+width:1000px;
+height: 80px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#result {
+width:1000px;
+height: 200px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#explanation {
+width:1000px;
+height: 600px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#survey{
+width:1000px;
+height: 100px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px; 
+}
+#next_experiment {
+width:1000px;
+height: 110px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#next{
+  position:relative;
+  width:115px;
+  color: #FFFAFA;
+  background-color:#4c7cb3;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+#previous{
+  margin-left: 35%;
+  color: #FFFAFA;
+  background-color:#4c7cb3;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+
+
+#father_container{
+  position: relative;
+}
+/* Controlling the size of the circle */
+.circle_container
+{
+  position: absolute;
+  top: 100%;
+  margin-left: 5%;
+  width:50px;
+  height: 50px;
+  padding : 0;
+}
+
+
+/* Drawing the circle */
+.circle_main
+{
+	width : 100%;
+	height : 100%;
+	border-radius : 50%;
+	border : 2px solid black;	
+	margin : 0;
+	padding : 0;
+	background-color:grey ;
+
+}
+
+/* Text container within the circle */
+.circle_text_container
+{
+	/* area constraints */
+	width : 70%;
+	height : 70%;
+	max-width : 70%;
+	max-height : 70%;
+	margin : 0;
+	padding : 0;
+	position : relative;
+	left : 15%;
+	top : 15%;
+	transform-style : preserve-3d;
+	}
+
+/*  Text within the circle  */
+.circle_text
+{
+	/* change font/size/etc here */
+	font: 12px "Tahoma", Calibri, Serif;	
+	text-align : center;
+	color: black;
+	position : relative;
+	top : 50%;
+	transform : translateY(-50%);
+}
+
+/*Pop up boxes for Help buttons*/
+/* [BOX] */
+#pop-box {
+  position: relative;
+  background: #fff;
+  margin: 30vh auto 0vh auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+/* [CLOSE BUTTON] */
+#pop-close {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 3rem;
+  height: 3rem;
+  font:calibri;
+  font-size: .875rem;
+  font-weight: 300;
+  border-radius: 100%;
+  background-color: #497eb2;
+  z-index: 4;
+  color: #fff;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* [TEXT] */
+#pop-text {
+  box-sizing: border-box;
+  font-size: .875rem;
+  color: #686868;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  
+}
+*/

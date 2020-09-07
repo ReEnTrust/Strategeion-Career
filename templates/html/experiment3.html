@@ -1,0 +1,401 @@
+<!--This is the template for Experiment 3-->
+<!--Experiment 3 corresponds to Explanation 3-->
+<!--Participants see Experiment 1, 2 and 3 in a random order-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_experiment3.css') }}">
+
+</head>
+<body onLoad="get_result(3);">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	
+	<!--This is the Result Section-->
+	<div id="result">
+		<div id="father_container">
+			<h2><i>Result</i></h2>
+		 	<p id="result_paragraph1"></p>
+		 	<p id="result_paragraph2"></p>
+		</div>
+	</div>
+
+	<!--This is the Experiment Section, showing Explanation 3-->
+	<div id="explanation">
+		<div id="father_container">
+
+			<!--Explanative Text-->
+			<h2><i>Explanation</i></h2>
+			<p>Here, we give you the opportunity to ask how a different Candidate Profile would have changed the outcome of our system. The answers to your questions constitute the explanation. <br/><br/> This explanation is based on your current Candidate Profile. It looks at how the outcome of the system would be modified by changing one feature at the time.</p>
+			<p id="click"> Click on <b>+</b> to access to the set of questions available for each feature. Then, click on the questions you want to ask.</p>
+
+		<!-- When candidates ask a question, the answer is given in a pop-up window -->
+		<div id="pop-up">
+ 			<div id="pop-box">
+    			<div id="pop-close" onclick="pop.close()">X</div>
+
+    			<!--Textual answer provided to participants-->
+    			<div id="pop-text"></div>
+
+    			<!--Visual answer provided to participants, only when modifying the feature can change the outcome of the shortlisting model-->
+    			<div id="pop-range">
+    				<p id="current_score_text" ></p>
+
+    				<!--The initial candidate profile for the feature of interest is displayed on this range bar-->
+    				<p id="novice"><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b></p>
+    				<input id="current_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/ >
+    				<output id="output_current_score" for="current_score"></output>
+    				<p id="new_score_text" ></p>
+
+    				<!--The Candidate profile,for the feature of interest, that is necessary to change the outcome of the system, is displayed on this range bar-->
+    				<p id="novice"><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b></p>
+    				<input id="new_score" type="range" step="1" min="0" max="100" value="0" disabled value="range" />
+    				<output id="output_new_score" for="new_score"></output>
+    			</div>
+    			
+    				
+    			<br/>
+
+    			<!--More Detail button-->
+    			<!--By clicking on it, detail about each sub-skill is provided-->
+    			<button type="button" class="collapsible" id="details"></button>
+
+					<div class="content" id="feature_detail">
+						<!--Sub-Skill1-->
+						<div class="detail" id="feature_1">
+							<div class="detail_title">
+								<h3 id="title_feature_1"><h3>
+							</div>
+							<br/>
+							<!--Answer given if modifying the feature can change the outcome of the system-->
+							<div id="change1">
+								<!--Textual answer-->
+								<p class="text1_feature" id="text1_feature_1"></p>
+								<!--Range bar showing the new candidate profile for this skill-->
+								<input id="new_feature_1" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature" id="output_new_feature_1" for="new_feature_1"></output>
+								<!--Textual answer-->
+								<p class="text2_feature" id="text2_feature_1"></p>
+								<!--Range bar showing how the feature profile would change with this new skill-->
+								<input id="new_feature_1_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_1_score" for="new_feature_1_score"></output>
+							</div>
+
+							<!--Answer given if modifying the feature cannot change the outcome of the system-->
+							<div id="unchange1">
+								<!--Textual answer saying how the Candidate Score would be modified with the new value for the sub-skill-->
+								<p class="unchange_text" id="unchange_text1"></p>
+							</div>
+						</div>
+
+						<!--The same is done for each sub-skill-->
+
+						<div class="detail" id="feature_2">
+							<div class="detail_title">
+								<h3 id="title_feature_2"><h3>
+							</div>
+							<br/>
+							<div id="change2">
+								<p class="text1_feature"id="text1_feature_2"></p>
+								<input id="new_feature_2" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_2" for="new_feature_2"></output>
+								<p class="text2_feature" id="text2_feature_2"></p>
+								<input id="new_feature_2_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_2_score" for="new_feature_2_score"></output>
+							</div>
+							<div id="unchange2">
+								<p class="unchange_text"id="unchange_text2"></p>
+							</div>
+
+							
+						</div>
+
+						<div class="detail" id="feature_3">
+							<div class="detail_title">
+								<h3 id="title_feature_3"><h3>
+							</div>
+							<br/>
+							<div id="change3">
+								<p class="text1_feature"id="text1_feature_3"></p>
+								<input id="new_feature_3" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_3" for="new_feature_3"></output>
+								<p class="text2_feature" id="text2_feature_3"></p>
+								<input id="new_feature_3_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_3_score" for="new_feature_3_score"></output>
+							</div>
+							<div id="unchange3">
+								<p class="unchange_text"id="unchange_text3"></p>
+							</div>
+
+							
+						</div>
+						<div class="detail" id="feature_4">
+							<div class="detail_title">
+								<h3 id="title_feature_4"><h3>
+							</div>
+							<br/>
+							<div id="change4">
+								<p class="text1_feature"id="text1_feature_4"></p>
+								<input id="new_feature_4" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_4" for="new_feature_4"></output>
+								<p class="text2_feature"id="text2_feature_4"></p>
+								<input id="new_feature_4_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature" id="output_new_feature_4_score" for="new_feature_4_score"></output>						
+							</div>
+							<div id="unchange4">
+								<p class="unchange_text"id="unchange_text4"></p>
+							</div>	
+						</div>
+						<div class="detail" id="feature_5">
+							<div class="detail_title">
+								<h3 id="title_feature_5"><h3>
+							</div>
+							<br/>
+							<div id="change5">
+								<p class="text1_feature"id="text1_feature_5"></p>
+								<input id="new_feature_5" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_5" for="new_feature_5"></output>
+								<p class="text2_feature"id="text2_feature_5"></p>
+								<input id="new_feature_5_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_5_score" for="new_feature_5_score"></output>						
+							</div>
+							<div id="unchange5">
+								<p class="unchange_text"id="unchange_text5"></p>
+							</div>	
+						</div>
+						<div class="detail" id="feature_6">
+							<div class="detail_title">
+								<h3 id="title_feature_6"><h3>
+							</div>
+							<br/>
+							<div id="change6">
+								<p class="text1_feature" id="text1_feature_6"></p>	
+								<input id="new_feature_6" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_6" for="new_feature_6"></output>
+								<p class="text2_feature"id="text2_feature_6"></p>						
+								<input id="new_feature_6_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_6_score" for="new_feature_6_score"></output>
+							</div>
+							<div id="unchange6">
+								<p class="unchange_text" id="unchange_text6"></p>
+							</div>
+						</div>
+						<div class="detail" id="feature_7">
+							<div class="detail_title">
+								<h3 id="title_feature_7"><h3>
+							</div>
+							<br/>	
+							<div id="change7">
+								<p class="text1_feature"id="text1_feature_7"></p>
+								<input id="new_feature_7" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_7" for="new_feature_7"></output>
+								<p class="text2_feature"id="text2_feature_7"></p>
+								<input id="new_feature_7_score" type="range" step="1" min="0" max="100" value="0" disabled value="range"/>
+								<output class="output_new_feature"id="output_new_feature_7_score" for="new_feature_7_score"></output>
+							</div>
+							<div id="unchange7">
+								<p class="unchange_text"id="unchange_text7"></p>
+							</div>
+						</div>
+						<!--Additional Information for participants-->
+						<div id="approximation">
+							<p id="approximation_text"class="unchange_text"> <b>* The changes induced by the features individually might be too small to produce change on the Candidate Score.</b></p>	
+						</div>
+						<div id="precision">
+							<p id="precision_text" class="unchange_text"> <b>* If you already have such features/skills, then your profile for these features/skills remains unchanged.</b></p>	
+						</div>
+
+
+					
+
+						
+					</div>
+					<!--Precisions for participants-->
+					<div id="precision_unique">
+							<p id="precision_text" class="unchange_text"> <b>* If you already have such features/skills, then your profile for these features/skills remains unchanged.</b></p>	
+					</div>
+
+  			</div>
+		</div>
+
+		<!--What-If questions candidates can ask-->
+
+		<!--Data Science questions-->
+		<button type="button" class="collapsible">Data Science</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Data Science', 'more', '0:3')">What if I had more skills in data science?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Data Science', 'less', '0:3')">What if I had less skills in data science?</button>
+			</div>
+		
+  				  			
+		</div>
+		<br/>
+
+		<!--IT questions-->
+		<button type="button" class="collapsible">IT</button>
+		<div class="content">
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('IT', 'more', '0:3')">What if I had more skills in IT?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('IT', 'less', '0:3')">What if I had less skills in IT?</button>
+			</div>
+
+
+		</div> 
+		<br/>
+
+		<!--IT Project Management questions-->
+		<button type="button" class="collapsible">IT Project Management</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('IT Project Management', 'more', '0:2')">What if I had more skills in IT Project Management?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('IT Project Management', 'less', '0:2')"> What if I had less skills in IT Project Management?</button>
+			</div>
+
+			
+		</div> 
+		<br/>
+
+		<!--Development Skills questions-->
+		<button type="button" class="collapsible">Development Skills</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Development Skills', 'more', '0:2')"> What if I had more development skills?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Development Skills', 'less', '0:2')"> What if I had less development skills?</button>
+			</div>
+
+		</div> 
+		<br/>
+
+		<!--Interpersonal Skills questions-->
+		<button type="button" class="collapsible">Interpersonal Skills</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Interpersonal Skills', 'more', '0:3')"> What if I had more interpersonal skills?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Interpersonal Skills', 'less', '0:3')"> What if I had less interpersonal skills?</button>
+			</div>
+
+			
+  		</div> 
+		<br/>
+		<!--Sports questions-->
+		<button type="button" class="collapsible">Sports</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Sport', 'more', '0:2')"> What if I did more sports?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Sport', 'less', '0:2')"> What if I did less sports?</button>
+			</div>
+
+
+		</div>
+		<br/>
+
+		<!--Volunteering questions-->
+		<button type="button" class="collapsible">Volunteering</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Volunteering', 'more', '0:1')"> What if I ever did volunteering?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Volunteering', 'less', '0:1')"> What if I never did volunteering?</button>
+			</div>
+
+		</div> 
+		<br/>
+
+		<!--Veteran questions-->
+		<button type="button" class="collapsible">Veteran</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Veteran', 'more', '0:1')"> What if I was a veteran from the UK Army?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Veteran', 'less', '0:1')"> What if I was not a veteran from the UK Army?</button>
+			</div>
+
+		</div>
+		<br/>
+
+		<!--Disability questions-->
+		<button type="button" class="collapsible">Disability</button>
+		<div class="content">
+
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Disability', 'more', '0:1')"> What if I had a disability?</button>
+			</div>
+			<div class="container">		
+				<button type="button" class="open_popup" onclick="pop.what_if('Disability', 'less', '0:1')"> What if I did not have a disability?</button>
+			</div>
+		<br/>
+
+
+		</div> 
+		
+		<!--Script to open and close the question when clicking on "+" and "-" -->
+		<script type="text/javascript">
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+    			this.classList.toggle("active");
+    			var content = this.nextElementSibling;
+    			if (content.style.display == "block") {
+     			content.style.display = "none";
+     			if(content.id!="feature_detail"){
+     				document.getElementById("explanation").style.height=(parseInt(document.getElementById("explanation").clientHeight)-117)+'px';
+     			}
+     			
+    			} else {
+     			content.style.display = "block";
+     			if(content.id!="feature_detail"){
+     				document.getElementById("explanation").style.height=(parseInt(document.getElementById("explanation").clientHeight)+125)+'px';
+     			}
+
+    					}
+  				});
+			} 
+		</script>
+	
+		</div>
+	</div>
+
+	<!--Information for participants-->
+	<div id="survey">
+		<h2><i>What's next?</i></h2>
+		<p> Now that you have read the explanation, please return to your <i>oxford.onlinesurveys</i> tab and answer the questions related this experiment.</p>
+	</div>
+
+	<!--Previous and Next buttons-->
+	<div id="next_experiment">
+		<div id="father_container">
+			<p>Now that you have completed the survey for this experiment, if you are ready, you can carry on with the study by clicking on Next.</p>
+			<button id="previous" onclick="back();"> Previous </button>
+			<button id="next" onclick="join_next_experiment();"> Next </button>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

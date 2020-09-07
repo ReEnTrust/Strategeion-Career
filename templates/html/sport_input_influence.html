@@ -1,0 +1,108 @@
+<!--This template is part of Explanation 2, it shows the input influence of each Sport within the decision-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_input_influence.css') }}">
+</head>
+<body onLoad="sports_input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/>
+	<div id="title">
+		<br>
+		<h1><a href="{{ url_for('graph') }}" width="50" height="50" id="arrow_sport"><img src="{{ url_for('static',    filename='ressources/arrow.png') }}" width="50" height="50"></a> 
+Sports</h1>
+	</div>
+	
+	<div id="explanation">
+		<p>This graph shows the importance of each Sport feature in the final decision.</p>
+		
+		<div id="father_container">
+
+			<!--Rugby Bubble-->
+			<div id="rugby_circle_container" class="circle_container">
+				<div id="rugby_circle_main" class="circle_main">
+					<div id="rugby_circle_text_container" class="circle_text_container">
+						<div id="rugby_circle_text"class = "circle_text">
+							<b>Rugby</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div id="football_circle_container" class="circle_container">
+				<div id="football_circle_main" class="circle_main">
+					<div id="football_circle_text_container" class="circle_text_container">
+						<div id="football_circle_text"class = "circle_text">
+							<b>Football</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Boxing Bubble-->
+			<div id="boxing_circle_container" class="circle_container">
+				<div id="boxing_circle_main" class="circle_main">
+					<div id="boxing_circle_text_container" class="circle_text_container">
+						<div id="boxing_circle_text"class = "circle_text">
+							<b>Boxing</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Basketball Bubble-->
+			<div id="basket_circle_container" class="circle_container">
+				<div id="basket_circle_main" class="circle_main">
+					<div id="basket_circle_text_container" class="circle_text_container">
+						<div id="basket_circle_text"class = "circle_text">
+							<b>Basketball</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Athletics Bubble-->
+			<div id="athletism_circle_container" class="circle_container">
+				<div id="athletism_circle_main" class="circle_main">
+					<div id="athletism_circle_text_container" class="circle_text_container">
+						<div id="athletism_circle_text"class = "circle_text">
+							<b>Athletism</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Gymnastic Bubble-->
+			<div id="gymnastic_circle_container" class="circle_container">
+				<div id="gymnastic_circle_main" class="circle_main">
+					<div id="gymnastic_circle_text_container" class="circle_text_container">
+						<div id="gymnastic_circle_text"class = "circle_text">
+							<b>Gymnastic</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Other Sport Bubble-->
+			<div id="other_circle_container" class="circle_container">
+				<div id="other_circle_main" class="circle_main">
+					<div id="other_circle_text_container" class="circle_text_container">
+						<div id="other_circle_text"class = "circle_text">
+						<b>Other</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>              
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

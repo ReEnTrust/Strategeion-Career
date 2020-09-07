@@ -1,0 +1,23 @@
+<!--From this page applicants can join the first experiment-->	
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_experiment_selection.css') }}">
+</head>
+<body>
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	<div id="main">
+		<div id="father_container">
+			<h1>Please, join Experiment 1 and then, answer to the corresponding part in the survey:</h1>
+			<button id="experiment" onclick="set_current_experiment(1);join_experiment(0);"> Experiment 1 </button>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+
+
+</body>
+</html>

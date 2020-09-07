@@ -1,0 +1,94 @@
+ html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+body {
+background: #497eb2;
+}
+h1{
+	text-align:center;
+	font-family: "Calibri";
+	font: 24pt;
+	color: #FFFAFA;
+}
+p{
+	font-family: "Calibri";
+	font-size-adjust: 28pt;
+}
+
+input{
+	text-align:center;
+	margin-left: 35%;
+  	font-size:24px;
+}
+
+
+#logo{
+	width:200px;
+}
+#main {
+width:1000px;
+height: 450px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#introduction {
+width:1000px;
+height: 330px;
+background: #FFFAFA;
+font-family: "Calibri";
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+text-align: center;
+}
+#father_container{
+	position:relative;
+}
+
+#main_id {
+width:1000px;
+height: 300px;
+background: #FFFAFA;
+font-family: "Calibri";
+font-size:20pt;
+margin: 25px auto;
+border: solid 2px #191970;
+padding: 10px;	
+}
+#apply{
+	margin-left: 50%;
+	color: #FFFAFA;
+	background-color:#4c7cb3;
+  	padding: 15px 32px;
+	text-decoration: none;
+  	display: inline-block;
+  	font-size: 14px;
+  	cursor:pointer;
+
+}
+#next{
+	color: #FFFAFA;
+	background-color:#4c7cb3;
+  	padding: 15px 32px;
+	text-decoration: none;
+  	display: inline-block;
+  	font-size: 14px;
+   	cursor:pointer;
+
+
+
+}
+#_id{
+
+	text-align:center;
+	font-family: "Calibri";
+	font: 80pt;
+	color: #4c7cb3;
+	
+}
+

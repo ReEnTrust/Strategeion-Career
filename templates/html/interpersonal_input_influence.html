@@ -1,0 +1,100 @@
+<!--This template is part of Explanation 2, it shows the input influence of each Interpersonal Skill within the decision-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_input_influence.css') }}">
+
+</head>
+<body onLoad="interpersonal_input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/>
+	<div id="title">
+		<br>
+		<h1><a href="{{ url_for('graph') }}" width="50" height="50" id="arrow_interpersonal"><img src="{{ url_for('static',    filename='ressources/arrow.png') }}" width="50" height="50"></a> Interpersonal Skills</h1>
+	</div>
+	
+	<div id="explanation">
+		<p>This graph shows the importance of each Interpersonal Skill feature in the final decision. </p>
+		
+		<div id="father_container">	
+
+			<!--Teamwork Bubble-->	
+			<div id="teamwork_circle_container" class="circle_container">
+				<div id="teamwork_circle_main" class="circle_main">
+					<div id="teamwork_circle_text_container" class="circle_text_container">
+						<div id="teamwork_circle_text"class = "circle_text">
+							<b>Teamwork</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Leadership Bubble-->	
+			<div id="leadership_circle_container" class="circle_container">
+				<div id="leadership_circle_main" class="circle_main">
+					<div id="leadership_circle_text_container" class="circle_text_container">
+						<div id="leadership_circle_text"class = "circle_text">
+							<b>Leadership</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Team Building Bubble-->	
+			<div id="team_building_circle_container" class="circle_container">
+				<div id="team_building_circle_main" class="circle_main">
+					<div id="team_building_circle_text_container" class="circle_text_container">
+						<div id="team_building_circle_text"class = "circle_text">
+							<b>Team Building</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Public Speaking Bubble-->	
+			<div id="public_speaking_circle_container" class="circle_container">
+				<div id="public_speaking_circle_main" class="circle_main">
+					<div id="public_speaking_circle_text_container" class="circle_text_container">
+						<div id="public_speaking_circle_text"class = "circle_text">
+							<b>Public Speaking</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Writing Bubble-->	
+			<div id="writing_circle_container" class="circle_container">
+				<div id="writing_circle_main" class="circle_main">
+					<div id="writing_circle_text_container" class="circle_text_container">
+						<div id="writing_circle_text"class = "circle_text">
+						<b>Writing</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Presentations Bubble-->	
+			<div id="presentations_circle_container" class="circle_container">
+				<div id="presentations_circle_main" class="circle_main">
+					<div id="presentations_circle_text_container" class="circle_text_container">
+						<div id="presentations_circle_text"class = "circle_text">
+							<b>Presentations</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>              
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>

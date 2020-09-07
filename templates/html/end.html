@@ -1,0 +1,26 @@
+<!--This is the last page of the experiment, where candidates are given their Study Completion ID-->
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
+
+</head>
+<body onload="set_id();">
+	<h1>Creation of your Study Completion ID</h1>
+	<div id="main_id">
+		<div id="father_container">
+			<p> You have been assigned the following Study Completion ID:</p>
+			<p id="_id"></p>
+			<p>Your Study Completion ID will permit us to store your answers in an anonymous way throughout our entire study. Please, copy it and paste it in the corresponding text-box in the survey.</p>
+			<p>Thank you very much for joining this study.</p>
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+
+</body>
+</html>

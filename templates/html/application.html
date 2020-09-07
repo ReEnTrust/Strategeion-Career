@@ -1,0 +1,231 @@
+<!--This Page is the Candidate Profile page. Candidates create their profile and submit it-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_application.css') }}">
+
+</head>
+
+
+<body onload="help_pop.open('Profile');">
+	<!--Pop up windows are used so that candidates can ask precisions about what some skills are-->
+	<div id="pop-up">
+ 			<div id="pop-box">
+    			<div id="pop-close" onclick="help_pop.close()">X</div>
+    			<div id="pop-text"></div>
+    		</div>
+    </div> 
+
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/>
+
+	<h1>Your Profile</h1>
+	<div>
+		<p id="intro">Please, fill this form to let us know your profile, so we can assess whether you could fit and grow at Strategeion. Please indicate how strong you are for each of the following skills and tick if you have certain features. Then, click on "Submit" to submit your profile. Please click on the question marks to access more detail about each feature.</p>
+	</div>
+	
+	<div id="father_container">
+
+		<!--Data Science block, with for each sub-skill, a range bar so that applicants can indicate how good they are in each skill-->
+		<div id="data">
+			<h2>Data Science</h2>
+
+			<h3>Python<button class="help"onclick="help_pop.open('Python')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="python" type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>SQL <button class="help"onclick="help_pop.open('SQL')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="sql"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>No SQL<button class="help"onclick="help_pop.open('No SQL')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="nosql"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Microsoft Excel <button class="help"onclick="help_pop.open('Microsoft Excel')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="excel"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Matlab <button class="help"onclick="help_pop.open('Matlab')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="matlab"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Database <button class="help"onclick="help_pop.open('Database')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="database"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Data Visualisation <button class="help"onclick="help_pop.open('Data Visualisation')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="visualisation"type="range" step="1" min="0" max="100" value="0" /></p>
+		</div>
+
+		<!--IT block, with for each sub-skill, a range bar so that applicants can indicate how good they are in each skill-->
+		<div id="IT">
+			<h2>IT</h2>
+
+			<h3>Linux Environment <button class="help"onclick="help_pop.open('Linux')">?</button></h3>            
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="linux"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Windows Environment <button class="help"onclick="help_pop.open('Windows')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="windows"type="range" step="1" min="0" max="100" value="0" /></p>	
+
+			<h3>MAC OS Environment <button class="help"onclick="help_pop.open('Mac')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="mac"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Cloud Systems <button class="help"onclick="help_pop.open('Cloud')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="cloud"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Wireless Modems/Routers <button class="help"onclick="help_pop.open('Modems')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="modems"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Cyber Security <button class="help"onclick="help_pop.open('Cybersecurity')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="cybersecurity"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>IP Setup <button class="help"onclick="help_pop.open('IP')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="ip"type="range" step="1" min="0" max="100" value="0" /></p>
+
+		</div>
+
+		<!--IT Project Management block, with for each sub-skill, a range bar so that applicants can indicate how good they are in each skill-->
+		<div id="management">
+			<h2>IT Project Management</h2>
+
+			<h3>Agile Methodologies <button class="help"onclick="help_pop.open('Agile')">?</button></h3>            
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="agile"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Schedules <button class="help"onclick="help_pop.open('Schedules')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="schedule"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Project Planning <button class="help"onclick="help_pop.open('Planning')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="planning"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Quality Management <button class="help"onclick="help_pop.open('Quality')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="quality"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Troubleshooting <button class="help"onclick="help_pop.open('Troubleshooting')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="troubleshooting"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Cost Management <button class="help"onclick="help_pop.open('Cost')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="cost"type="range" step="1" min="0" max="100" value="0"/></p>
+
+		</div>
+
+		<!--Development Skills block, with for each sub-skill, a range bar so that applicants can indicate how good they are in each skill-->
+		<div id="development">
+			<h2>Development Skills</h2>
+
+			<h3>C++ <button class="help"onclick="help_pop.open('Cpp')">?</button></h3>            
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="c++"type="range" step="1" min="0" max="100" value="0"></p>
+
+			<h3>Java <button class="help"onclick="help_pop.open('Java')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="java"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>JavaScript <button class="help"onclick="help_pop.open('JavaScript')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="javascript"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>HTML <button class="help"onclick="help_pop.open('HTML')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="html"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>CSS <button class="help"onclick="help_pop.open('CSS')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="css"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Web Development <button class="help"onclick="help_pop.open('Web')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="web"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Software Development <button class="help"onclick="help_pop.open('Software')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="software"type="range" step="1" min="0" max="100" value="0"/></p>
+
+		</div>
+
+		<!--Interpersonal SKills block, with for each sub-skill, a range bar so that applicants can indicate how good they are in each skill-->
+		<div id="interpersonal">
+			<h2>Interpersonal Skills </h2>
+
+			<h3>Teamwork<button class="help"onclick="help_pop.open('Teamwork')">?</button></h3>            
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="teamwork" type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Leadership <button class="help"onclick="help_pop.open('Leadership')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="leadership" type="range" step="1" min="0" max="100" value="0" /></p>	
+
+			<h3>Team Building <button class="help"onclick="help_pop.open('Team Building')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="team_building"type="range" step="1" min="0" max="100" value="0" /></p>
+
+			<h3>Public Speaking <button class="help"onclick="help_pop.open('Public Speaking')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="public_speaking"type="range" step="1" min="0" max="100" value="0"/></p>
+
+			<h3>Writing <button class="help"onclick="help_pop.open('Writing')">?</button></h3> 
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="writing"type="range" step="1" min="0" max="100" value="0"/></p>
+			<h3>Presentations <button class="help"onclick="help_pop.open('Presentations')">?</button></h3> 
+
+			<p><b>Novice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Expert</b><input id="presentations"type="range" step="1" min="0" max="100" value="0" /></p>
+		
+		<!--Sports block, applicants tick the sport they practice-->
+		</div>
+			<div id="sport">
+				<h2>Sports </h2>
+				<br/>
+
+				<div>
+					<input type="checkbox" id="rugby" name="rugby">
+	  				<label for="rugby"><b>Rugby</b></label>
+	  			</div>
+
+	  			<div>
+	  				<input type="checkbox" id="football" name="football" >
+	  				<label for="football"><b>Football</b></label>
+	  			</div>
+
+	  			<div>
+	  				<input type="checkbox" id="boxing" name="boxing" >
+	  				<label for="boxing"><b>Boxing</b></label>
+	  			</div>
+
+	  			<div>
+	  				<input type="checkbox" id="basketball" name="basketball" >
+	  				<label for="basketball"><b>Basketball</b></label>
+	  			</div>
+
+	  			<div>
+	  				<input type="checkbox" id="athletism" name="athletism" >
+	  				<label for="athletism"><b>Athletism</b></label>
+	  			</div>
+
+	  			<div>
+	  				<input type="checkbox" id="gymnastic" name="gymnastic" >
+	  				<label for="gymnastic"><b>Gymnastic</b></label>
+	  			</div>
+
+	  			<div>
+	  				<input type="checkbox" id="other" name="other" >
+	  				<label for="other"><b>Other</b></label> 
+	  			</div>        
+
+			</div>
+
+			<!--Demographic features block, applicants tick the demographics they have-->
+			<div id="features">
+				<h2>Other</h2>
+
+				<div>
+	  				<input type="checkbox" id="veteran" name="veteran" >
+	  				<label for="veteran"><b>Veteran &nbsp; &nbsp;</b> <button class="help"onclick="help_pop.open('Veteran')">?</button></label> 
+	  			</div> 
+
+	  			<div>
+	  				<input type="checkbox" id="disability" name="disability" >
+	  				<label for="disability"><b>Disability &nbsp; &nbsp;</b> <button class="help"onclick="help_pop.open('Disability')">?</button></label> 
+	  			</div> 
+
+	  			<div>
+	  				<input type="checkbox" id="volunteering" name="volunteering" >
+	  				<label for="volunteering"><b>Volunteering &nbsp; &nbsp;</b> <button class="help"onclick="help_pop.open('Volunteering')">?</button></label> 
+	  			</div>
+
+			</div>
+
+		<!--Button to submit their Candidate Profile-->
+		<div id="submission">
+			<button id="submit" onclick="profile();"> Submit </button>                
+		</div>
+	</div>
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+
+	
+</body>
+</html>

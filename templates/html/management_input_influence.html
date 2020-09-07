@@ -1,0 +1,102 @@
+<!--This template is part of Explanation 2, it shows the input influence of each IT Project Management within the decision-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is the Career Website of Strategeion">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Stratergeion Career</title>
+	<link rel="stylesheet" href="{{ url_for('static',    filename='css/style_input_influence.css') }}">
+
+</head>
+<body onLoad="management_input_influence();">
+	<img  id="logo" src="{{ url_for('static',    filename='ressources/Logo.jpg') }}" alt="logo"/> 
+	<div id="title">
+		<br>
+		<h1><a href="{{ url_for('graph') }}" width="50" height="50" id="arrow_management"><img src="{{ url_for('static',    filename='ressources/arrow.png') }}" width="50" height="50"></a>
+IT Project Management</h1>
+	</div>
+	
+	<div id="explanation">
+		<p>This graph shows the importance of each IT Project Management feature in the final decision. </p>
+
+		<div id="father_container">	
+
+			<!--Agile Methodologies Bubble-->	
+			<div id="agile_circle_container" class="circle_container">
+				<div id="agile_circle_main" class="circle_main">
+					<div id="agile_circle_text_container" class="circle_text_container">
+						<div id="agile_circle_text"class = "circle_text">
+							<b>Agile Methodologies</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Schedules Bubble-->	
+			<div id="schedule_circle_container" class="circle_container">
+				<div id="schedule_circle_main" class="circle_main">
+					<div id="schedule_circle_text_container" class="circle_text_container">
+						<div id="schedule_circle_text"class = "circle_text">
+							<b>Schedules</b>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<!--Project Bubble-->	
+			<div id="project_circle_container" class="circle_container">
+				<div id="project_circle_main" class="circle_main">
+					<div id="project_circle_text_container" class="circle_text_container">
+						<div id="project_circle_text"class = "circle_text">
+							<b>Project Planning</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Quality Management Bubble-->	
+			<div id="quality_circle_container" class="circle_container">
+				<div id="quality_circle_main" class="circle_main">
+					<div id="quality_circle_text_container" class="circle_text_container">
+						<div id="quality_circle_text"class = "circle_text">
+							<b>Quality Management</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Troubleshooting Bubble-->	
+			<div id="troubleshooting_circle_container" class="circle_container">
+				<div id="troubleshooting_circle_main" class="circle_main">
+					<div id="troubleshooting_circle_text_container" class="circle_text_container">
+						<div id="troubleshooting_circle_text"class = "circle_text">
+							<b>Troubleshooting</b>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Cost Management Bubble-->	
+			<div id="cost_circle_container" class="circle_container">
+				<div id="cost_circle_main" class="circle_main">
+					<div id="cost_circle_text_container" class="circle_text_container">
+						<div id="cost_circle_text"class = "circle_text">
+							<b>Cost Management</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+
+
+	</div>              
+	<script src="{{ url_for('static',    filename='js/code.js') }}" ></script>
+</body>
+</html>
