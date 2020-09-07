@@ -8,7 +8,7 @@ OVERVIEW
 - Participants to the online experiment had to pretend they were job applicants, apply to the offer presented to them and then join each Experiment one after the other.
 - For each Experiment, participants are shortlisted by one of 3 different models and see one of the 3 explanation types.
 - Link to the associated survey (opened until the 1st of November): https://oxford.onlinesurveys.ac.uk/automated-hr-systems-explanations.
-- Link to the Strategeion Carrer: https://strategeion-career.herokuapp.com/job_offer
+- Link to the Strategeion Career: https://strategeion-career.herokuapp.com/job_offer
 
 
 GENERAL USAGE NOTES
